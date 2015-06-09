@@ -51,7 +51,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div class="horizontal layout">
       <input is="iron-input"
-          id="expMonth"
           aria-labelledby$="[[_computeAriaLabel(ariaLabelPrefix,'monthLabel')]]"
           required$="[[required]]"
           maxlength="2"
@@ -70,7 +69,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           readonly$="[[readonly]]">
       <span>/</span>
       <input is="iron-input"
-          id="expYear"
+          id="expirationYear"
           aria-labelledby$="[[_computeAriaLabel(ariaLabelPrefix,'yearLabel')]]"
           required$="[[required]]"
           maxlength="2"
@@ -153,7 +152,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       this.fire('dateChanged', this.date);
       // Advance cursor to year after month entry
       if (month.length === 2) {
-        this.$.expYear.focus();
+        this.$.expirationYear.focus();
       }
     },
 
